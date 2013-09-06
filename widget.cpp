@@ -1,5 +1,6 @@
 #include "widget.h"
 #include "ui_widget.h"
+#include <QDebug>
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -38,6 +39,7 @@ void Widget::on_joinBtn_clicked()
 }
 
 void Widget::getMsg(string s) {
+    qDebug()<<s.size();
     ui->label->setText(ui->label->text()+'\n'+s.c_str());
     if (server)
         for (auto x : users)

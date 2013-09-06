@@ -6,6 +6,8 @@
 #include <windows.h>
 #include <QThread>
 
+#define MAX_PATH 100000
+
 using std::string;
 
 class DServer;
